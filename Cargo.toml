@@ -1,0 +1,47 @@
+[package]
+name = "focus-pane"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "A Markdown task manager and Pomodoro timer for the terminal"
+license = "MIT"
+repository = "https://github.com/peterwyr-dev/focus-pane"
+homepage = "https://github.com/peterwyr-dev/focus-pane"
+readme = "README.md"
+keywords = ["markdown", "pomodoro", "productivity", "terminal", "tui"]
+categories = ["command-line-utilities"]
+include = [
+    "/src/**",
+    "/tests/**",
+    "/examples/**",
+    "/docs/**",
+    "/Cargo.toml",
+    "/Cargo.lock",
+    "/README.md",
+    "/ROADMAP.md",
+    "/CHANGELOG.md",
+    "/LICENSE",
+]
+
+[[bin]]
+name = "focus-pane"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+clap = { version = "4.6", features = ["derive"] }
+crossterm = "0.29"
+fs2 = "0.4"
+glob = "0.3"
+libc = "0.2"
+ratatui = "0.30"
+regex = "1.12"
+rusqlite = { version = "0.40", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2.0"
+toml = "1.0"
+uuid = { version = "1.22", features = ["v4"] }
+
+[dev-dependencies]
+tempfile = "3.27"

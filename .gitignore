@@ -1,0 +1,10 @@
+/target/
+/dist/
+/TODO.md
+
+*.db
+*.db-shm
+*.db-wal
+.*.focus-pane.lock
+.*.worker.lock
+.DS_Store

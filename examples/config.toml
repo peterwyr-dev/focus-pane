@@ -1,0 +1,27 @@
+# Example Focus Pane configuration
+
+[tasks]
+file = "TODO.md"
+
+[timer]
+default_preset = "standard"
+auto_start_break = true
+auto_start_focus = false
+
+[[timer.presets]]
+name = "standard"
+focus_minutes = 25
+break_minutes = 5
+long_break_minutes = 15
+cycles_before_long_break = 4
+
+[[timer.presets]]
+name = "deep"
+focus_minutes = 50
+break_minutes = 10
+long_break_minutes = 20
+cycles_before_long_break = 3
+
+# [[workspaces]]
+# name = "Projects"
+# files = ["~/projects/*/TODO.md"]
